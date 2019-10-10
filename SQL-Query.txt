@@ -1,0 +1,10 @@
+insert into country_details_master(country_name) values ('Other International');
+
+SET FOREIGN_KEY_CHECKS=0; DROP TABLE user_login; SET FOREIGN_KEY_CHECKS=1;
+
+insert into  user_login(username,password,status,user_role) values ('admin','magin@123','Approved','admin');
+
+insert into  user_details(bankAcctNumber,bankName,country,memberID,member_Ref_ID,firstname,lastname,email1,phonenumber1) 
+values ('0039323980',' DBS Bank','Singapore','GLGP600800','GLGP600800','Global','Gains Limited','globalgains@gmail.com','+62 21 2255 4567');
+
+

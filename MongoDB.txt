@@ -1,0 +1,202 @@
+Connect DB
+==========
+
+mongo localhost/admin
+ 
+show databases;
+use InvestmentDB;
+Update 
+=======
+
+Remove
+======
+db.randomNumber.remove( { } )
+db.publictree.remove( { } )
+db.ownTree.remove( { } )
+db.privateTree.remove( { } )
+db.tempPublicTree.remove( { } )
+db.tempPrivateTree.remove( { } )
+db.tempOwnTree.remove( { } )
+
+
+Drop 
+=====
+db.randamNumber.drop()
+Select 
+=======
+db.randomNumber.find();
+db.publictree.find();
+db.ownTree.find();
+db.privateTree.find();
+
+
+db.tempPublicTree.find();
+db.tempPrivateTree.find();
+db.tempOwnTree.find();
+
+
+
+db.publictree.find().sort( { "queueNumber": -1 } )
+Insert
+=======
+Alex Path
+---------
+
+db.randomNumber.insertOne( { randomID:1 , currentqueueNumber: 0, nextOutqueueNumber: 7, invocieNumber: 0, invoiceCode: "GSP" } );
+db.randomNumber.insertOne( { randomID:2 , currentqueueNumber: 0, invocieNumber: 0, invoiceCode: "GSPR" } );
+db.randomNumber.insertOne( { randomID:3 , publicCount: 0, privateCount: 0, ownCount: 0, publicInvCode: "TGSP",privateInvCode: "PGSP",ownInvCode: "OGSP" } );
+
+
+
+===
+
+
+db.randomNumber.insertOne( { randomID:1 , currentqueueNumber: 0, nextOutqueueNumber: 8, invocieNumber: 0, invoiceCode: "GSP" } );
+db.randomNumber.insertOne( { randomID:2 , currentqueueNumber: 0, invocieNumber: 0, invoiceCode: "GSPR" } );
+db.randomNumber.insertOne( { randomID:3 , publicCount: 1, privateCount: 0, ownCount: 0, publicInvCode: "TGSP",privateInvCode: "PGSP",ownInvCode: "OGSP" } );
+
+
+===
+
+db.randomNumber.insertOne( { randomID:1 , currentqueueNumber: 0, nextOutqueueNumber: 8, invocieNumber: 0, invoiceCode: "GSP" } );
+db.randomNumber.insertOne( { randomID:2 , currentqueueNumber: 0, invocieNumber: 0, invoiceCode: "GSPR" } );
+db.randomNumber.insertOne( { randomID:3 , publicCount: 1, privateCount: 1, ownCount: 1, publicInvCode: "TGSP",privateInvCode: "PGSP",ownInvCode: "OGSP" } );
+
+
+Clear
+======
+Control + l
+
+
+
+
+
+
+
+Calling MongoDB
+===============
+C:\>cd PerfLogs
+Access is denied.
+
+C:\>cd ..
+
+C:\>cd "Program Files"
+
+C:\Program Files>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 9888-061F
+
+ Directory of C:\Program Files
+
+09-07-2019  20:05    <DIR>          .
+09-07-2019  20:05    <DIR>          ..
+01-03-2019  10:02    <DIR>          Common Files
+09-07-2019  18:51    <DIR>          Git
+29-09-2017  20:11    <DIR>          internet explorer
+09-07-2019  11:10    <DIR>          Java
+16-08-2019  09:45    <DIR>          McAfee
+01-03-2019  10:00    <DIR>          Microsoft Analysis Services
+01-03-2019  10:02    <DIR>          Microsoft Office
+28-02-2019  16:53    <DIR>          Microsoft Policy Platform
+09-07-2019  19:03    <DIR>          Microsoft VS Code
+09-07-2019  20:05    <DIR>          MongoDB
+09-07-2019  11:26    <DIR>          MySQL
+09-07-2019  18:51    <DIR>          nodejs
+09-07-2019  11:43    <DIR>          Notepad++
+29-09-2017  20:11    <DIR>          Windows Defender
+29-09-2017  20:12    <DIR>          Windows Defender Advanced Threat Protection
+29-09-2017  19:16    <DIR>          Windows Mail
+29-09-2017  20:11    <DIR>          Windows Media Player
+29-09-2017  19:16    <DIR>          Windows Multimedia Platform
+29-09-2017  19:16    <DIR>          windows nt
+29-09-2017  20:11    <DIR>          Windows Photo Viewer
+29-09-2017  19:16    <DIR>          Windows Portable Devices
+29-09-2017  19:16    <DIR>          Windows Security
+29-09-2017  19:16    <DIR>          WindowsPowerShell
+               0 File(s)              0 bytes
+              25 Dir(s)  202,441,625,600 bytes free
+
+C:\Program Files>cd MongoDB
+
+C:\Program Files\MongoDB>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 9888-061F
+
+ Directory of C:\Program Files\MongoDB
+
+09-07-2019  20:05    <DIR>          .
+09-07-2019  20:05    <DIR>          ..
+09-07-2019  20:29    <DIR>          Server
+               0 File(s)              0 bytes
+               3 Dir(s)  202,442,911,744 bytes free
+
+C:\Program Files\MongoDB>cd Server
+
+C:\Program Files\MongoDB\Server>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 9888-061F
+
+ Directory of C:\Program Files\MongoDB\Server
+
+09-07-2019  20:29    <DIR>          .
+09-07-2019  20:29    <DIR>          ..
+09-07-2019  20:05    <DIR>          3.6
+09-07-2019  20:29    <DIR>          4.0
+               0 File(s)              0 bytes
+               4 Dir(s)  202,442,870,784 bytes free
+
+C:\Program Files\MongoDB\Server>cd 4.0
+
+C:\Program Files\MongoDB\Server\4.0>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 9888-061F
+
+ Directory of C:\Program Files\MongoDB\Server\4.0
+
+09-07-2019  20:29    <DIR>          .
+09-07-2019  20:29    <DIR>          ..
+09-07-2019  20:29    <DIR>          bin
+14-08-2019  15:30    <DIR>          data
+28-05-2019  21:34            30,608 LICENSE-Community.txt
+09-07-2019  20:31    <DIR>          log
+28-05-2019  21:34            16,726 MPL-2
+28-05-2019  21:34             2,601 README
+28-05-2019  21:34            60,005 THIRD-PARTY-NOTICES
+28-05-2019  21:41            81,355 THIRD-PARTY-NOTICES.gotools
+               5 File(s)        191,295 bytes
+               5 Dir(s)  202,442,878,976 bytes free
+
+C:\Program Files\MongoDB\Server\4.0>cd bin
+
+C:\Program Files\MongoDB\Server\4.0\bin>mongo.exe
+MongoDB shell version v4.0.10
+connecting to: mongodb://127.0.0.1:27017/?gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("3d7e3aa2-e626-4577-ac58-7dcb1ed5ec80") }
+MongoDB server version: 4.0.10
+Server has startup warnings:
+2019-07-09T08:01:05.428-0700 I CONTROL  [initandlisten]
+2019-07-09T08:01:05.428-0700 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2019-07-09T08:01:05.428-0700 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2019-07-09T08:01:05.428-0700 I CONTROL  [initandlisten]
+---
+Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+and anyone you share the URL with. MongoDB may use this information to make product
+improvements and to suggest MongoDB products and deployment options to you.
+
+To enable free monitoring, run the following command: db.enableFreeMonitoring()
+To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+
+>
+>
+>
+> show databases;
+InvestmentDB  0.000GB
+admin         0.000GB
+config        0.000GB
+local         0.000GB
+> use InvestmentDB;
+switched to db InvestmentDB
