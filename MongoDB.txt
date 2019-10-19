@@ -5,8 +5,13 @@ mongo localhost/admin
  
 show databases;
 use InvestmentDB;
+
 Update 
 =======
+
+db.randomNumber.update({"_id" :ObjectId("5d7f70d6d1937bdd6b8518a0") },{$set : {"miniCount":0}});
+
+db.randomNumber.update({"_id" :ObjectId("5d7f70d6d1937bdd6b8518a0") },{$set : {"miniInvCode":'MGSP'}})
 
 Remove
 ======
