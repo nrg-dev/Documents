@@ -1,0 +1,58 @@
+Connect DB
+==========
+
+mongo localhost/admin
+ 
+show databases;
+use InvestmentDB;
+Update 
+=======
+
+Remove
+======
+db.randomNumber.remove( { } )
+db.publictree.remove( { } )
+db.ownTree.remove( { } )
+db.privateTree.remove( { } )
+db.miniTree.remove( { } )
+db.tempPublicTree.remove( { } )
+db.tempPrivateTree.remove( { } )
+db.tempOwnTree.remove( { } )
+db.tempMiniTree.remove( { } )
+
+
+Drop 
+=====
+db.randamNumber.drop()
+Select 
+=======
+db.randomNumber.find();
+db.publictree.find();
+db.ownTree.find();
+db.privateTree.find();
+db.miniTree.find();
+
+db.tempPublicTree.find();
+db.tempPrivateTree.find();
+db.tempOwnTree.find();
+db.tempMiniTree.find();
+
+
+db.publictree.find().sort( { "queueNumber": -1 } )
+db.miniTree.find().sort( { "queueNumber": -1 } )
+
+Insert
+=======
+
+db.randomNumber.insertOne( { randomID:1 , currentqueueNumber: 0, nextOutqueueNumber: 7,invocieNumber: 0, invoiceCode: "GSP" } );
+db.randomNumber.insertOne( { randomID:2 , currentqueueNumber: 0, invocieNumber: 0, invoiceCode: "GSPR" } );
+
+Mongo Changed Queries
+---------------------
+db.randomNumber.insertOne( { randomID:3 , publicCount: 0, privateCount: 0, ownCount: 0,miniCount: 0, publicInvCode: "TGSP",privateInvCode: "PGSP",ownInvCode: "OGSP",miniInvCode: "MGSP"} );
+db.randomNumber.insertOne( { randomID:4 , currentqueueNumber: 0,mininextOutqueueNumber:2, invocieNumber: 0, invoiceCode: "GSP" } );
+
+
+Clear
+======
+Control + l
