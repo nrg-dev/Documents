@@ -6,10 +6,34 @@ mongo localhost/admin
 show databases;
 use InvestmentDB;
 
+Select 
+=======
+db.randomNumber.find();
+db.publictree.find();
+db.ownTree.find();
+db.privateTree.find();
+db.miniTree.find();
+
+db.tempPublicTree.find();
+db.tempPrivateTree.find();
+db.tempOwnTree.find();
+db.tempMiniTree.find();
+
+
+db.publictree.find().sort( { "queueNumber": -1 } )
+db.miniTree.find().sort( { "queueNumber": -1 } )
+
+
+Update / Clear Mini Tree data
+=============================
+db.randomNumber.update({"_id" :ObjectId("5d7f70d6d1937bdd6b8518a0") },{$set : {"miniCount":0}});
+db.randomNumber.update({"_id" :ObjectId("5daac66fb0a0518f2809d55f") },{$set : {"currentqueueNumber":0}});
+db.randomNumber.update({"_id" :ObjectId("5daac66fb0a0518f2809d55f") },{$set : {"invocieNumber":0}});
+db.randomNumber.update({"_id" :ObjectId("5daac66fb0a0518f2809d55f") },{$set : {"mininextOutqueueNumber":2}});
+
 Update 
 =======
 
-db.randomNumber.update({"_id" :ObjectId("5d7f70d6d1937bdd6b8518a0") },{$set : {"miniCount":0}});
 
 db.randomNumber.update({"_id" :ObjectId("5d7f70d6d1937bdd6b8518a0") },{$set : {"miniInvCode":'MGSP'}})
 
@@ -34,22 +58,8 @@ db.tempMiniTree.remove( { } )
 Drop 
 =====
 db.randamNumber.drop()
-Select 
-=======
-db.randomNumber.find();
-db.publictree.find();
-db.ownTree.find();
-db.privateTree.find();
-db.miniTree.find();
-
-db.tempPublicTree.find();
-db.tempPrivateTree.find();
-db.tempOwnTree.find();
-db.tempMiniTree.find();
 
 
-db.publictree.find().sort( { "queueNumber": -1 } )
-db.miniTree.find().sort( { "queueNumber": -1 } )
 
 Insert
 =======
