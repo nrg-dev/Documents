@@ -13,6 +13,11 @@ db.randomNumber.update({"_id" :ObjectId("5d7f70d6d1937bdd6b8518a0") },{$set : {"
 
 db.randomNumber.update({"_id" :ObjectId("5d7f70d6d1937bdd6b8518a0") },{$set : {"miniInvCode":'MGSP'}})
 
+
+Delete
+========
+db.randomNumber.remove({ "_id" : ObjectId("5d7f70d6d1937bdd6b8518a0") });
+
 Remove
 ======
 db.randomNumber.remove( { } )
