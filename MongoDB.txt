@@ -26,7 +26,7 @@ db.miniTree.find().sort( { "queueNumber": -1 } )
 
 Update / Clear Mini Tree data
 =============================
-db.randomNumber.update({"_id" :ObjectId("5d7f70d6d1937bdd6b8518a0") },{$set : {"miniCount":0}});
+db.randomNumber.update({"_id" :ObjectId("5de89885ec297e877cbd2611") },{$set : {"miniCount":0}});
 db.randomNumber.update({"_id" :ObjectId("5daac66fb0a0518f2809d55f") },{$set : {"currentqueueNumber":0}});
 db.randomNumber.update({"_id" :ObjectId("5daac66fb0a0518f2809d55f") },{$set : {"invocieNumber":0}});
 db.randomNumber.update({"_id" :ObjectId("5daac66fb0a0518f2809d55f") },{$set : {"mininextOutqueueNumber":2}});
